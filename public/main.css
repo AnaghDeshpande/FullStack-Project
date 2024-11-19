@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+.head
+{
+    background-image: linear-gradient(rgba(4,190,75,0.1),rgba(6,35,12,0.8)),url("/images/mainbg/farm2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+nav 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    flex: 1;
+}
+nav .title
+{
+    font-size: 60px;
+    color: black;
+    margin: 0;
+    padding-left: 10px;
+}
+
+nav ul li
+{
+    display: inline-block;
+    padding: 5px;
+}
+nav ul li a,button
+{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    padding: 15px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    font-family: Georgia;
+}
+nav ul li::after
+{
+    background: black;
+    width: 0px;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: auto;
+}
+nav ul li:hover::after
+{
+    background: rgb(0, 0, 0);
+    width: 100%;
+    content: "";
+    display: block;
+    height: 3px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+#text
+{
+    font-size: 30px;
+    font-family:Georgia;
+    letter-spacing: 0.5px;
+    line-height: 45px;
+    text-transform: capitalize; 
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    text-align: center;
+}
+#text a, #loginbutton
+{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 12px;
+    border: 1px solid black;
+    padding: 10px;
+    font-family: Georgia;
+    text-transform: capitalize; 
+    color: black;
+    margin-right: 50px;
+    border-radius: 15px;
+}
+#text a:hover, #loginbutton:hover
+{
+    transition: 0.5s;
+    /* background: white; */
+    border: 1px solid white;
+    border-radius: 15px;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(7, 4,0, 0.2);
+}
+#text button
+{
+    background-color: transparent;
+    border: none;
+    font-family: Georgia;
+}
+
+.info
+{
+    margin-top: 10%;
+    margin-bottom: 40%;
+    text-align: center;
+}
+.info section
+{
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.d1, .d2, .d3
+{
+    border: 1px solid black;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: rgb(250, 239, 220);
+    margin: 0px;
+    flex: 1;
+    height: 150px;
+    width: 120px;
+    margin: 10px; 
+}
+.d1:hover, .d2:hover, .d3:hover
+{
+   box-shadow: 7px 7px 7px 0.2px grey;
+}
+
+/* ********************************************************************************************************************** */
+.home {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    /* border-radius: 10px; */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    line-height: 1.5;
+    /* justify-content: center;
+    align-items: center; */
+    font-family: Georgia;
+  }
+
+  .homeh2{
+    color:green;
+    font-weight: bold;
+    word-spacing: 1.5;
+    font-size: 2em;
+  }
+  .homep
+  {
+    padding-top: 50px;
+  }
+  .home div
+  {
+    display: flex;
+  }
+  .home img
+  {
+    height: 200px;
+    width: 350px;
+    border-radius: 15px;
+  }
+
+  .homep{
+    font-size: 1.5em;
+  }
+
+.info
+{
+    margin: 10px;
+}
+
+.info h3
+{
+    font-size: 40px;
+    color: green;
+}
+.info div
+{
+    display: inline-flex;
+    text-align: center;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+
+}
+.info section
+{
+    border: 1px solid black;
+    margin: 45px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(189, 241, 200, 0.532);
+    font-size: 20px;
+}
+.info section:hover
+{
+    box-shadow: 3px 3px 3px 1px;
+}
+.info img
+{
+    width: 250px;
+    height: 200px;
+    display: inline;
+    border-radius: 15px;
+}
+.info a
+{
+    text-decoration: none;
+    color: black;
+}
+.info .rmo
+{
+    font-size: 20px;
+}
+.info .rmo:hover
+{
+    border: 1px solid black;
+    padding: 20px;
+    box-shadow: 3px 3px 3px 1px;
+}
+
+/* *************************************************************************************************************** */
+
+.login-container {
+    /* margin-top: 0%; */
+    max-width: 400px;
+    margin: 50px auto;
+    /* padding: 20px; */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .login-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4CAF50;
+  }
+
+  .login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  .login-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .login-container button:hover {
+    background-color: #45a049;
+  }

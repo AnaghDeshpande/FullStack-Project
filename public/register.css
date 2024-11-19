@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    /* display:grid;
+     justify-content: center;
+     align-items: center;
+     margin: 10px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     font-size: 25px;
+     padding: 0px;
+     min-height: 100vh;
+     font-family: Arial, sans-serif;
+     overflow: hidden; */
+}
+
+.d0 {
+    display: flex;
+    column-width: 200px;
+    justify-content: space-around;
+    column-gap: 70px;
+
+    /* column-gap: 5px; */
+    /* gap: 10px;
+    gap: 10px 20px;
+    row-gap: 10px;
+    column-gap: 20px; */
+}
+
+form {
+    /* display: grid; */
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+input {
+    margin-top: 3px;
+    /* text-align: center; */
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 7px;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+/* textarea {
+    background-color: transparent;
+    border: 1px solid black;
+    font-size: 25px;
+} */
+
+select {
+    margin-top: 10px;
+    /* text-align: center; */
+    border-radius: 12px;
+    padding: 7px;
+}
+
+button {
+    color: white;
+    margin-top: 30px;
+    background-color: #4caf50;
+    text-align: center;
+    border-radius: 7px;
+    border: none;
+    font-size: 25px;
+    /* background-color: transparent; */
+    padding: 7px;
+    cursor: pointer;
+}
+
+select,
+option {
+    border: 1px solid black;
+    font-size: 25px;
+    background-color: transparent;
+    padding: 7px;
+}
+
+/* option {
+    background-color: transparent;
+} */
+
+button:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    box-shadow: 1px 1px 1px 1px black;
+
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmOre - Farmer's Website</title>
+  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/signup.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="/dropdown.css">
+</head>
+
+<body>
+  <section class="head" id="head">
+    <nav>
+      <p class="title" id="title">
+        FARMORE
+      </p>
+      <ul>
+        <li><a href="/">HOME</a></li>
+
+        <LI><a href="#">
+            <div class="dropdown">
+              <button class="dropbtn">SERVICES
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="/buyproducts">Buy Products</a>
+                <a href="/sell">Sell Products</a>
+                <a href="/cropcalender">Crop Calender</a>
+              </div>
+            </div>
+          </a>
+        </LI>
+
+        <LI><a href="/about">ABOUT US</a></LI>
+        <LI><a href="/help">HELP</a></LI>
+
+
+        <li><a href="/register">Farmer Registration</a></li>
+        <!-- <LI><button class="signin button" onclick="document.getElementById('loginn').style.display='block'"
+            style="width:auto;">SIGN in</button></LI> -->
+      </ul>
+    </nav>
+
+    <div class="text" id="text">
+      <h3>The one website you need for farming.</h3>
+      <p>You wish for It we provide it.</p>
+      <!-- <a href="">SIGN UP</a> -->
+      <!-- <button id="loginbutton" onclick="document.getElementById('loginn').style.display='block'"style="width:auto;">Login</button> -->
+      <button><a href="/signin">Sign In</a></button>
+    </div>
+  </section>
+
+  <!-- ************************************************************************************************************* -->
+
+  <section class="home">
+    <h2 class="homeh2">Welcome to Our Farming Community</h2>
+    <p class="homep">Experience the harmony of nature and technology at our farm. We are committed to sustainable
+      practices, leveraging cutting-edge technology for efficient farming and creating a marketplace for the diverse
+      produce of our villages.</p>
+  </section>
+
+  <section class="home">
+    <h2 class="homeh2">Sustainable Farming</h2>
+    <div>
+      <p class="homep">At our farm, we believe in sustainable agriculture. We prioritize eco-friendly practices, crop
+        rotation, and natural fertilizers to ensure the health of our land and the well-being of our community.</p>
+      <img
+        src="https://agriculturepost.com/wp-content/uploads/2023/09/Emerging-technologies-and-precision-farming-SaaS-to-design-future-landscape-for-agriculture.jpg"
+        alt="Farm Image">
+    </div>
+  </section>
+
+  <section class="home">
+    <h2 class="homeh2">Technology in Farming</h2>
+    <p class="homep">Embracing the power of technology, we use advanced tools and smart farming techniques to optimize
+      crop yield, monitor soil health, and conserve resources. Our commitment to innovation ensures a balance between
+      tradition and progress.</p>
+  </section>
+
+  <section class="home">
+    <h2 class="homeh2">Farm Monitoring and Maintenance</h2>
+    <p class="homep">We employ state-of-the-art monitoring systems to keep a close eye on crop health, weather patterns,
+      and overall farm conditions. Regular maintenance ensures our equipment is in top-notch condition, contributing to
+      sustainable and efficient farming practices.</p>
+  </section>
+
+  <section class="home">
+    <h2 class="homeh2">Farmers' Produce Marketplace</h2>
+    <p class="homep">Explore our marketplace where local farmers from villages come together to showcase their fresh
+      produce. By connecting consumers directly with farmers, we promote community support and empower local economies.
+    </p>
+  </section>
+
+  <section class="info" id="info">
+    <h3>News</h3>
+    <div class="news" id="news">
+      <section><a href="https://www.agriculture.com/farmers-looking-for-the-sweet-spot-in-crop-mix-decisions-8414129">
+          <img
+            src="https://www.agriculture.com/thmb/kw2xoCRp70B19rSLrvUOntip_S0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/LL205-2000-ad7482be0b6f43e18dbd1a9ad489f4c9.jpg"
+            alt="">
+          <br>Farmers are concerned about winter wheat emergence</a></section>
+      <section><a href="https://www.agriculture.com/feds-slightly-lower-iowa-corn-yield-estimates-8374385">
+          <img
+            src="https://www.agriculture.com/thmb/y9RLOYb_PLDnL15M-CcvebMwhOY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Mature-Corn-Field-Windy-Iowa-Letts-October-7e73cc1e62354d24b9967db55803a546.jpeg"
+            alt="">
+          <br>Feds slightly lower Iowa corn yield estimates.</a></section>
+      <section><a href="https://www.agriculture.com/farmers-are-planning-and-prepping-for-2024-8410777">
+          <img
+            src="https://www.agriculture.com/thmb/tWtTYtSdyc0B_OVqeeNnoTvlcFQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Fall-tile-project-Iowa-farm-1d7563dc376c4fd8a121a15bd204402d.jpeg"
+            alt="">
+          <br>Farmers are concerned about winter wheat emergence.
+        </a></section>
+    </div>
+    <br>
+    <a href="/articles" class="rmo" id="rmo">Read More</a>
+  </section>
+
+  <!-- <section>
+
+    <div class="login-container">
+      <h2>Get Latest News and Updates from FarmOre</h2>
+      <form id="loginForm" onsubmit="validateLogin(event)">
+        <label for="username">Your Name</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit" onclick=myf() id="ok">Join</button>
+        <div>
+          <p id="hide" style="opacity: 0;">Thanks for submitting your information. Stay tuned for the latest updates!
+          </p>
+        </div>
+        <script>
+          function myf() {
+            window.alert("Thanks for submitting your information. Stay tuned for the latest updates!")
+
+          }
+        </script>
+      </form>
+
+    </div>
+  </section> -->
+
+
+  <!-- ************************************************************************************************************* -->
+  <!-- ************************************************************************************************************* -->
+
+
+
+  <!-- <div class="signin" id="Signup">
+    <button class="signin button" onclick="document.getElementById('Signup').style.display='block'" style="width:auto;">Signup</button>  
+
+</div> -->
+
+
+  <div id="loginn" class="modal">
+
+    <form class="modal-content" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('loginn').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+
+      </div>
+
+      <div class="container">
+        <label for="uname" style="display: block;"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" class="transparent" required><br><br>
+
+        <label for="psw" style="display: block;"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" class="transparent" required><br><br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" class="rmme"> Remember me
+        </label>
+
+        <div class="container">
+          <span class="psw"><a href="#" style="text-decoration: none;color: black;">Forgot password?</a></span><br>
+          <div class="subcan">
+            <button type="submit" class="sub">SUBMIT</button>
+            <button type="button" onclick="document.getElementById('loginn').style.display='none'"
+              class="cancelbtn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+  <div class="login">
+
+    <!-- <button  class="login button" onclick="document.getElementById('loginn').style.display='block'" style="width:auto;">Login</button> -->
+  </div>

@@ -1,0 +1,42 @@
+body{
+    background-image: url(https://img.freepik.com/free-photo/abstract-blur-green-bokeh-background_74190-4016.jpg?w=826&t=st=1708937081~exp=1708937681~hmac=b5a19c79ad401cc05894c11cd5b06c73e2060171ad26769b11c1186ae9aa3a03);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0; /* Initially set opacity to 0 for fade-in effect */
+    animation: fadeInAnimation 2s ease forwards;
+}
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.one{
+    text-align: center;
+    padding-left: 20%;
+}
+.one-border{
+    /* border: 3px solid white; */
+    border-collapse: collapse;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px -0.1px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+.header{
+    font-size: 38px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 5%;
+}
+.two-border{
+    margin-top: 5%;
+    border-collapse: collapse;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px -0.1px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+.two{
+    text-align: justify;
+    padding-left: 25%;
+}

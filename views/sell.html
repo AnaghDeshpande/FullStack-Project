@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/60d5b069c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/sell.css">
+    <!-- JS -->
+    <!-- <script src="/js/sell.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Name</label>
+                            <input type="text" placeholder="Enter your name" id="f_name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" placeholder="Enter your mail-id" id="email" required>
+                        </div>
+
+                        <!-- <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="text" id='num' placeholder="Enter your mobile number" id="p_number" required>
+                        </div> -->
+
+                        <div class="input-field">
+                            <label>City</label>
+                            <input type="text" placeholder="Enter your Place" id="city" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Product type</label>
+                            <input type="text" placeholder="Enter product type" id="product_type" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Product</label>
+                            <input type="text" placeholder="Enter your product name" id="product_name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Quantity</label>
+                            <input type="number" placeholder="Enter for quintal" id="quintal" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Set Prize</label>
+                            <input type="text" placeholder="Enter your prize for 1Kg" id="set_prize" required>
+                        </div>
+
+                        <!-- <div class="input-field">
+                            <label>Product Advertisement</label>
+                            <input type="file" id="file"> -->
+                    </div>
+                    <!-- <div class="input-field">
+                        <label>Decription</label>
+                        <textarea class="Description" placeholder="Description of the product (optional)"></textarea>
+                    </div> -->
+                </div>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Nationality</label>
+                        <input type="text" placeholder="Enter your country" id="country" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>State</label>
+                        <input type="text" placeholder="State name" id="state" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>District</label>
+                        <input type="text" placeholder="District name" id="district" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Pincode</label>
+                        <input type="text" placeholder="Enter your Pincode" id="pins" required>
+                    </div>
+
+                    <!-- <button class="nxtBtn">
+                        <span class="btnText" onclick="submitForm()">Submit</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button> -->
+
+                    <!-- <div class="input-field">
+                        <label>Issue Date</label>
+                        <input type="date" placeholder="Enter issue date" id="issue_date" required>
+                    </div>
+    
+                    <div class="input-field">
+                        <label>Expiry date</label>
+                        <input type="date" placeholder="Enter Expiry date" id="expiry_date" required>
+                    </div> -->
+
+                </div>
+
+                <!-- <div class="buttons">
+                    <button class="backBtn">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span class="btnText">Back</span>
+                    </button> -->
+
+                <button class="nxtBtn">
+                    <span class="btnText" onclick="submitForm()">Sell</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <!-- </div> -->
+
+                <!-- <div class="message">
+                    <h2 class="endlast">Thank you for selling!!!</h2>
+                    <h3 class="endlast">Your product will be sold within 3 days.</h3>
+                </div> -->
+
+                <!-- <button class="nxtBtn">
+                    <span class="btnText" onclick="submitForm()">Next</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button> -->
+            </div>
+    </div>
+
+    <!-- <div class="form second"> -->
+    <!-- <div class="details end">
+            <span class="title">Other Details</span> -->
+
+
+    <!-- </div> -->
+    <!-- </div> -->
+    </form>
+    </div>
+
+
+    <script>
+        function submitForm() {
+            const formData = {
+                firstname: document.getElementById('f_name').value,
+                // lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                //phone: document.getElementById('p_number').value,
+                city: document.getElementById('city').value,
+                product_type: document.getElementById('product_type').value,
+                product_name: document.getElementById('product_name').value,
+                quantity: document.getElementById('quintal').value,
+                set_price: document.getElementById('set_prize').value,
+                //description: document.getElementById('city').value,
+                Nationality: document.getElementById('country').value,
+                //address: document.getElementById('address').value,
+                state: document.getElementById('state').value,
+                district: document.getElementById('district').value,
+                pins: document.getElementById('pins').value,
+
+            };
+
+            fetch('http://localhost:3001/sell', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Handle the response data as needed
+                    console.log(data);
+                    alert("Thank You. You will be contacted soon");
+                })
+                .catch(error => {
+                    // Handle errors during the fetch
+                    console.error('Error:', error);
+                    alert("Registration was not Successful");
+                });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+*{
+  text-align: center;
+}
+
+.loginbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 100% auto 15% auto;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db; /* Border color */
+    color: #ffffff; /* Text color */
+    background-color: #3498db; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.5s ease; /Smooth transition on hover/
+}
+.loginn{
+    align-items: right;
+}
+
+.modal {
+    color: #abaaaa;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+  
+  /* Modal Content/Box */
+  .modal-content {
+    text-align: center;
+    color: #f1f1f185;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: thin solid #fefefeb3;
+    border-radius: 7px;
+    box-shadow: 7px 8px 9px rgba(0, 0, 0, 0.395);
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 50%;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+    background-image: url(/images/mainbg/avatar.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  span.psw {
+    /* float: right; */
+    padding-top: 16px;
+  }
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  .cancelbtn {
+    width: auto;
+    /* padding: 10px 18px; */
+    background-color: #f44336;
+    border-radius: 9px;
+  }
+  .psw{
+    text-align: center;
+    color: black;
+    text-decoration: none;
+  }
+  .container {
+    color: #272525c3;
+    padding: 16px;
+    font-family: Georgia;
+    color: black;
+  }
+.signin button {
+
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 90% auto 15% auto;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db; /* Border color */
+    color: #ffffff; /* Text color */
+    background-color: #3498db; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+}
+.cancelbtn
+{
+  margin-left: 15px;
+}
+.cancelbtn,.sub
+{
+    /* padding: 20px; */
+    padding: auto;
+    margin-top: 10px;
+    background-color: transparent;
+    /* font-weight: bold;  */
+    text-align: center;
+    color:black; 
+    border: thin rgb(167, 239, 241) ;
+    border-radius: 3px; 
+    transition: all 0.3s ease;
+}
+.cancelbtn:hover,.sub:hover{
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+  transform: scale(1.2);
+  padding: 7px;
+  transition: all 0.3s ease;
+}
+/* .subcan
+{
+    display: flex;
+} */
+
+.signin button:hover {
+    background-color: rgb(43, 43, 43);
+    border-color: rgb(53, 52, 52);
+    border-style: none;
+}
+
+.loginbutton:hover {
+    background-color: rgb(43, 43, 43);
+    border-color: rgb(53, 52, 52);
+    border-style: none;
+}
+
+.transparent
+{
+  padding: 7px;
+  border-radius: 12px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Details Form</title>
+    <link rel="stylesheet" href="/buynow.css">
+</head>
+<body>
+
+    <form action="/buynow" method="post">
+        <h2 style="text-align: center;">Delivery Details</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
+
+        <label for="specialInstructions">Special Instructions:</label>
+        <textarea id="specialInstructions" name="specialInstructions" rows="4"></textarea>
+
+        <button type="submit" onclick="disp()">Confirm and Place Order</button>
+    </form>
+
+    <script>
+        function disp(){
+            window.alert("Thank You For Placing Your Order");
+        }
+    </script>
+
+</body>
+</html>

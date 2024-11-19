@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Registration</title>
+    <link rel="stylesheet" href="/register.css">
+</head>
+
+<body>
+
+    <form id="registrationForm">
+        <h2>Farmer Registration</h2>
+
+        <div class="d0">
+            <div class="d1">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <br>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                <br>
+            </div>
+            <div class="d2">
+                <label for="address">Address:</label>
+                <input id="address" name="address" rows="4" required>
+                <br>
+
+
+                <label for="State">State</label>
+                <input type="text" id="state" required>
+                <br>
+
+                <label for="District">District</label>
+                <input type="text" id="district" required>
+                <br>
+
+                <label for="City">City</label>
+                <input type="text" id="city" required>
+                <br>
+            </div>
+            <div class="d3">
+                <label for="pin">Postal Code</label>
+                <input type="number" id="pin" maxlength="6" minlength="6" required>
+                <br>
+
+
+                <label for="soil_type">Soil Type</label>
+                <input type="text" id="soil_type" required>
+                <br>
+
+                <label for="water_source">Water Source</label>
+                <input type="text" id="water_source" required>
+                <br>
+
+                <label for="crop">Main Crop:</label>
+                <select id="crop" name="crop" required>
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice</option>
+                    <option value="corn">Corn</option>
+                    <!-- Add more crop options as needed -->
+                </select>
+                <br>
+            </div>
+        </div>
+
+        <button type="button" onclick="submitForm()">Register</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                state: document.getElementById('state').value,
+                district: document.getElementById('district').value,
+                city: document.getElementById('city').value,
+                pin: document.getElementById('pin').value,
+                soil_type: document.getElementById('soil_type').value,
+                water_source: document.getElementById('water_source').value,
+                crop: document.getElementById('crop').value,
+            };
+
+            fetch('http://localhost:3001/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    alert('Registration successful!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Registration failed. Please try again.');
+                });
+        }
+    </script>
+
+</body>
+
+</html>
